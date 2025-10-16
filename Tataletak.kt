@@ -101,3 +101,111 @@ fun TataletakRowColumn(modifier: Modifier = Modifier) { // [cite: 3]
         }
     }
 }
+
+@Composable
+fun TataletakBoxColumnRow(modifier: Modifier = Modifier) { // [cite: 3]
+    val gambar = painterResource(id = R.drawable.Kucing) // [cite: 3]
+    Column(modifier = modifier) {
+        Box(
+            modifier = modifier
+                .height(110.dp) // [cite: 3]
+                .fillMaxWidth()
+                .background(color = Color.Yellow), // [cite: 3]
+            contentAlignment = Alignment.Center // [cite: 3]
+        ) {
+            Column {
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "Col1 Row1 Komponen1") // [cite: 4]
+                    Text(text = "Col1 Row1 Komponen2") // [cite: 3]
+                    Text(text = "Col1 Row1 Komponen3") // [cite: 3]
+                }
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly // [cite: 4]
+                ) {
+                    Text(text = "Col1 Row2 Komponen1") // [cite: 4]
+                    Text(text = "Col1 Row2 Komponen2") // [cite: 4]
+                    Text(text = "Col1 Row2 Komponen3") // [cite: 4]
+                }
+            }
+        }
+        Spacer(modifier = Modifier.height(height = 10.dp)) // [cite: 4]
+        Box(
+            modifier = modifier
+                .height(500.dp) // [cite: 4, 25]
+                .fillMaxWidth()
+                .background(color = Color.Cyan), // [cite: 4, 26]
+            contentAlignment = Alignment.Center // [cite: 4, 27]
+        ) {
+            Image(
+                painter = gambar, // [cite: 28]
+                contentDescription = null, // [cite: 29]
+                contentScale = ContentScale.Fit // [cite: 30, 31]
+            )
+            Text(
+                text = "My Gofun", // [cite: 32]
+                fontSize = 50.sp, // [cite: 4, 33]
+                color = Color.Red, // [cite: 4, 34]
+                fontWeight = FontWeight.Bold, // [cite: 35]
+                fontFamily = FontFamily.Cursive // [cite: 36]
+            )
+        }
+    }
+}
+
+@Composable
+fun TataletakBoxColumnRow(modifier: Modifier = Modifier) { // [cite: 3]
+    val gambar = painterResource(id = R.drawable.Kucing) // [cite: 3]
+    Column(modifier = modifier) {
+        Box(
+            modifier = modifier
+                .height(110.dp) // [cite: 3]
+                .fillMaxWidth()
+                .background(color = Color.Yellow), // [cite: 3]
+            contentAlignment = Alignment.Center // [cite: 3]
+        ) {
+            Column {
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "Col1 Row1 Komponen1") // [cite: 4]
+                    Text(text = "Col1 Row1 Komponen2") // [cite: 3]
+                    Text(text = "Col1 Row1 Komponen3") // [cite: 3]
+                }
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly // [cite: 4]
+                ) {
+                    Text(text = "Col1 Row2 Komponen1") // [cite: 4]
+                    Text(text = "Col1 Row2 Komponen2") // [cite: 4]
+                    Text(text = "Col1 Row2 Komponen3") // [cite: 4]
+                }
+            }
+        }
+        Spacer(modifier = Modifier.height(height = 10.dp)) // [cite: 4]
+        Box(
+            modifier = modifier
+                .height(500.dp) // [cite: 4, 25]
+                .fillMaxWidth()
+                .background(color = Color.Cyan), // [cite: 4, 26]
+            contentAlignment = Alignment.Center // [cite: 4, 27]
+        ) {
+            Image(
+                painter = gambar, // [cite: 28]
+                contentDescription = null, // [cite: 29]
+                contentScale = ContentScale.Fit // [cite: 30, 31]
+            )
+            Text(
+                text = "My Gofun", // [cite: 32]
+                fontSize = 50.sp, // [cite: 4, 33]
+                color = Color.Red, // [cite: 4, 34]
+                fontWeight = FontWeight.Bold, // [cite: 35]
+                fontFamily = FontFamily.Cursive // [cite: 36]
+            )
+        }
+    }
+}
